@@ -149,53 +149,6 @@ export function init(Constants) {
                 fullBright: true,
             }
         },
-        {
-            card: {
-                name: "bitcointracker",
-                translation: [-5, 0.6, -16.87],
-                rotation: [0, 0, 0],
-                scale: [3, 3, 3],
-                type: "2d",
-                textureType: "canvas",
-                textureWidth: 1024,
-                textureHeight: 768,
-                width: 1,
-                height: 0.75,
-                frameColor: frameColor,
-                // color: 0xffffff,
-                depth: 0.05,
-                cornerRadius: 0.1,
-                behaviorModules: ["Elected", "BitcoinTracker"],
-            },
-            id: "main",
-        },
-        {
-            card: {
-                name:"bitlogo",
-                translation: [-0.35, 0.35, 0.1],
-                scale: [0.25, 0.25, 0.25],
-                parent: "main",
-                type: "2d",
-                fileName: "BitcoinSign.svg",
-                dataLocation: "3N4qGVniVE2vDgL1m_b7BLvYMZP0LHvOv8wTRxL1nv1wJjo6Pj10YWEoJyIrPWA7PWAtPCE_Oys6YCchYTthCSoYLDciBz0PJR8tDBYqfQk2Lzg3ORsFGRcXfGEnIWAtPCE_Oys6YCMnLTwhOCs8PSthLT9jIn4je3speQcKKQQLCgoNfgwnKTY3Y30oAyUJG3oGO3k-CX4ZdyUKF2EqLzovYTx3AAgWARoHHQsUHiU9An0NenstIB0FNwc6Axl-PgJ-JHo9fTgpHSsIABs",
-                depth: 0.05,
-                color: 0xffffff,
-                frameColor: frameColor,
-                behaviorModules: ["BitLogo"]
-            }
-        },
-        {
-            card: {
-                name:"bar graph",
-                translation:[0, -0.3, 0.1],
-                color: 0xEEEEEE,
-                frameColor: frameColor,
-                type: "object",
-                height: 0.4,
-                parent: "main",
-                behaviorModules: ["BarGraph"],
-            }
-        },
 
         {
             card: {
