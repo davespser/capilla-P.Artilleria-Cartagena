@@ -9,7 +9,7 @@ export function init(Constants) {
 
     Constants.UserBehaviorDirectory = "behaviors/default";
     Constants.UserBehaviorModules = [
-        "csmLights.js", "bouncingBall.ts", "bitcoinTracker.ts", "openPortal.js", "urlLink.js", "cradle.js"
+        "lights.js", "bouncingBall.ts", "bitcoinTracker.ts", "openPortal.js", "urlLink.js", "cradle.js", "video.js",
     ];
 
     const frameColor = 0x888888;
@@ -28,167 +28,15 @@ export function init(Constants) {
             card: {
                 name:"world model",
                 type: "3d",
-                fileName: "/TEATRO3.zip",
-                dataLocation: "./assets/3D/TEATRO3.zip",
+                fileName: "/artgallery_042122.glb.zip",
+                dataLocation: "./assets/3D/artgallery_042122.glb.zip",
                 singleSided: true,
                 shadow: true,
                 layers: ["walk"],
                 translation:[0, -1.7, 0],
                 dataScale:[1,1,1],
                 loadSynchronously: true,
-		isWorld: true,
-                placeholder: true,
-                placeholderSize: [400, 0.1, 400],
-                placeholderColor: 0x808080,
-                placeholderOffset: [0, 0, 0],
-            }
-        },
- {
-            card: {
-                name:"TEATRO2",
-                type: "3d",
-                fileName: "/TEATRO2.zip",
-                dataLocation: "./assets/3D/TEATRO2.zip",
-                singleSided: true,
-                shadow: true,
-                layers: ["walk"],
-                translation:[0, -1.7, 0],
-                dataScale:[1,1,1],
-                loadSynchronously: true,
-		isWorld: true,
-                placeholder: true,
-                placeholderSize: [400, 0.1, 400],
-                placeholderColor: 0x808080,
-                placeholderOffset: [0, 0, 0],
-            }
-        },
-  {
-            card: {
-                name:"COLUMNASeste",
-                type: "3d",
-                fileName: "/COLUMNASeste.zip",
-                dataLocation: "./assets/3D/COLUMNASeste.zip",
-                singleSided: true,
-                shadow: true,
-                layers: ["walk"],
-                translation:[0, -1.7, 0],
-                dataScale:[1,1,1],
-                loadSynchronously: true,
-		isWorld: true,
-                placeholder: true,
-                placeholderSize: [400, 0.1, 400],
-                placeholderColor: 0x808080,
-                placeholderOffset: [0, 0, 0],
-            }
-        },
- {
-            card: {
-                name:"COLUMNASnorte",
-                type: "3d",
-                fileName: "/COLUMNASnorte.zip",
-                dataLocation: "./assets/3D/COLUMNASnorte.zip",
-                singleSided: true,
-                shadow: true,
-                layers: ["walk"],
-                translation:[0, -1.7, 0],
-                dataScale:[1,1,1],
-                loadSynchronously: true,
-		isWorld: true,
-                placeholder: true,
-                placeholderSize: [400, 0.1, 400],
-                placeholderColor: 0x808080,
-                placeholderOffset: [0, 0, 0],
-            }
-        },
- {
-            card: {
-                name:"COLUMNASsur",
-                type: "3d",
-                fileName: "/COLUMNASsur.zip",
-                dataLocation: "./assets/3D/COLUMNASsur.zip",
-                singleSided: true,
-                shadow: true,
-                layers: ["walk"],
-                translation:[0, -1.7, 0],
-                dataScale:[1,1,1],
-                loadSynchronously: true,
-		isWorld: true,
-                placeholder: true,
-                placeholderSize: [400, 0.1, 400],
-                placeholderColor: 0x808080,
-                placeholderOffset: [0, 0, 0],
-            }
-        },
- {
-            card: {
-                name:"COLUMNASoeste",
-                type: "3d",
-                fileName: "/COLUMNASoeste.zip",
-                dataLocation: "./assets/3D/COLUMNASoeste.zip",
-                singleSided: true,
-                shadow: true,
-                layers: ["walk"],
-                translation:[0, -1.7, 0],
-                dataScale:[1,1,1],
-                loadSynchronously: true,
-		isWorld: true,
-                placeholder: true,
-                placeholderSize: [400, 0.1, 400],
-                placeholderColor: 0x808080,
-                placeholderOffset: [0, 0, 0],
-            }
-        },
-{
-            card: {
-                name:"ARCOS2",
-                type: "3d",
-                fileName: "/ARCOS2.zip",
-                dataLocation: "./assets/3D/ARCOS2.zip",
-                singleSided: true,
-                shadow: true,
-                layers: ["walk"],
-                translation:[0, -1.7, 0],
-                dataScale:[1,1,1],
-                loadSynchronously: true,
-		isWorld: true,
-                placeholder: true,
-                placeholderSize: [400, 0.1, 400],
-                placeholderColor: 0x808080,
-                placeholderOffset: [0, 0, 0],
-            }
-        },
- {
-            card: {
-                name:"columnasteatro",
-                type: "3d",
-                fileName: "/columnasteatro.zip",
-                dataLocation: "./assets/3D/columnasteatro.zip",
-                singleSided: true,
-                shadow: true,
-                layers: ["walk"],
-                translation:[0, -1.7, 0],
-                dataScale:[1,1,1],
-                loadSynchronously: true,
-		isWorld: true,
-                placeholder: true,
-                placeholderSize: [400, 0.1, 400],
-                placeholderColor: 0x808080,
-                placeholderOffset: [0, 0, 0],
-            }
-        },
-{
-            card: {
-                name:"ARBUSTOS",
-                type: "3d",
-                fileName: "/ARBUSTOS.zip",
-                dataLocation: "./assets/3D/ARBUSTOS.zip",
-                singleSided: true,
-                shadow: true,
-                layers: ["walk"],
-                translation:[0, -1.7, 0],
-                dataScale:[1,1,1],
-                loadSynchronously: true,
-		isWorld: true,
+
                 placeholder: true,
                 placeholderSize: [400, 0.1, 400],
                 placeholderColor: 0x808080,
@@ -198,28 +46,15 @@ export function init(Constants) {
         {
             card: {
                 name: "light",
-		translation: [28.07552943465729, 2.669868149169724, -23.613334446501693],
                 layers: ["light"],
                 type: "lighting",
                 behaviorModules: ["Light"],
                 fileName: "/aboveClouds.jpg",
                 dataLocation: "./assets/sky/aboveClouds.jpg",
                 dataType: "jpg",
-                toneMappingExposure: 0.7,
+                toneMappingExposure: 0.2,
                 loadSynchronously: true,
             }
-        },
-	{
-            card: {
-                name: "fireball2",
-               // layers: ["light"],
-                type: "object",
-                behaviorModules: ["Fireball"],
-                layers:["pointer"],
-      translation: [12, 0.6, 10.77],
-    scale: [0.01242981421844663, 0.01242981421844663, 0.01242981421844663],
-                attribution: "https://www.clicktorelease.com/blog/vertex-displacement-noise-3d-webgl-glsl-three-js/",
-            },
         },
         {
             card: {
@@ -314,8 +149,41 @@ export function init(Constants) {
                 fullBright: true,
             }
         },
-       
-       
+        {
+            card: {
+                name: "bitcointracker",
+                translation: [-5, 0.6, -16.87],
+                rotation: [0, 0, 0],
+                scale: [3, 3, 3],
+                type: "2d",
+                textureType: "canvas",
+                textureWidth: 1024,
+                textureHeight: 768,
+                width: 1,
+                height: 0.75,
+                frameColor: frameColor,
+                // color: 0xffffff,
+                depth: 0.05,
+                cornerRadius: 0.1,
+                behaviorModules: ["Elected", "BitcoinTracker"],
+            },
+            id: "main",
+        },
+        {
+            card: {
+                name:"bitlogo",
+                translation: [-0.35, 0.35, 0.1],
+                scale: [0.25, 0.25, 0.25],
+                parent: "main",
+                type: "2d",
+                fileName: "BitcoinSign.svg",
+                dataLocation: "3N4qGVniVE2vDgL1m_b7BLvYMZP0LHvOv8wTRxL1nv1wJjo6Pj10YWEoJyIrPWA7PWAtPCE_Oys6YCchYTthCSoYLDciBz0PJR8tDBYqfQk2Lzg3ORsFGRcXfGEnIWAtPCE_Oys6YCMnLTwhOCs8PSthLT9jIn4je3speQcKKQQLCgoNfgwnKTY3Y30oAyUJG3oGO3k-CX4ZdyUKF2EqLzovYTx3AAgWARoHHQsUHiU9An0NenstIB0FNwc6Axl-PgJ-JHo9fTgpHSsIABs",
+                depth: 0.05,
+                color: 0xffffff,
+                frameColor: frameColor,
+                behaviorModules: ["BitLogo"]
+            }
+        },
         {
             card: {
                 name:"bar graph",
@@ -331,23 +199,23 @@ export function init(Constants) {
 
         {
             card: {
-                name: "text editor",
-                className: "TextFieldActor",
-                translation: [5.5, 0.4, -16.87],
-                rotation: [0, 0, 0],
-                depth: 0.05,
-                type: "text",
-                runs: [{text: "\nWelcome to the Croquet Gallery!\n"}],
-                margins: {left: 20, top: 20, right: 20, bottom: 20},
-                backgroundColor: 0xc4a836,
-                color: 0x000000,
-                fullBright: true,
-                //color: 0xf4e056,
-                frameColor: frameColor,
-                width: 2,
+               
+                  translation: [-7.401123641061256, 0.4, 1.126241794287294],
+    rotation: [0, 0.9998859372736829, 0, 0.015103391749164566],
+		scale: [12, 12, 1],
+                depth: 1.5,
+                type: "2d",
+               width: 4,
                 height: 2,
-                textScale: 0.002,
-                shadow: true,
+                fullBright: true,
+                behaviorModules: ["VideoPlayer"],
+                textureLocation: "./assets/video/Big_Buck_Bunny.mp4",
+                textureWidth: 8096,
+                textureHeight: 4048,
+                textureType: "video",
+                step: 0.5,
+		permissions: ["action.tv"],
+                
             }
         },
         {
@@ -395,9 +263,9 @@ export function init(Constants) {
         */
         {
             card: {
-                translation: [-50.8485665232795, 23.85036741284044, -115.74745294900674],
-    scale: [4, 4, 4],
-    rotation: [0, -0.9100963247726925, 0, -0.41439676595653796],
+                translation: [11.914606500892997, 0.4, 0.25],
+                scale: [4, 4, 4],
+                rotation: [0, -Math.PI / 2, 0],
                 layers: ["pointer"],
                 behaviorModules: ["PDFView"],
                 color: 8947848,
@@ -430,31 +298,13 @@ export function init(Constants) {
                 textureType: "image",
                 type: "2d",
             }
-        },
-           card: {
-	name: "/grid1.glb",
-	fileName: "/grid1.glb",
-   translation: [-10.58047791398584, -0.6626820227187933, -8.542646718990785],
-    scale: [24.48822052171962, 24.48822052171962, 24.48822052171962],
-    rotation: [0, -0.05285109259411952, 0, 0.9986024043690301],
-    layers: ["pointer"], 
-    dataLocation: "./assets/3D/grid1.glb",
-    dataScale: [1, 0.037014829151785715, 0.037014829151785715],
-    modelType: "glb",
-    shadow: true,
-    singleSided: true,
-    type: "3d",
-
-            }
-        },
+        }
         {
             card: {
-                name:"grid",
-                type: "3d",
-                translation: [-2.924402314957632, -3.6379107393376877, -2.4783152459716042],
-scale: [26.657561428522698, 26.657561428522698, 26.657561428522698],
-    rotation: [0, 0.0014567602213670372, 0, 0.9999989389242658],
-                
+                name:"pendulum",
+                type: "object",
+                translation: [-0.03701975732147922, 3.2368919013826734, 8.444841625884546],
+                behaviorModules: ["Rapier", "Pendulum"],
                 layers: ["pointer"],
                 scale: [0.2, 0.2, 0.2],
                 color: 0xaa6666,
