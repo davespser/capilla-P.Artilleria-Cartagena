@@ -9,7 +9,7 @@ export function init(Constants) {
 
     Constants.UserBehaviorDirectory = "behaviors/default";
     Constants.UserBehaviorModules = [
-        "lights.js", "bouncingBall.ts", "bitcoinTracker.ts", "openPortal.js", "urlLink.js", "cradle.js", "video.js",
+        "lights.js", "bouncingBall.ts", "bitcoinTracker.ts", "openPortal.js", "urlLink.js", "cradle.js", "video.js", "spin.js",
     ];
 
     const frameColor = 0x888888;
@@ -59,13 +59,13 @@ export function init(Constants) {
         {
             card: {
                 name: "image card",
-                translation: [12, 0.6, 10.77],
-                rotation: [0, -Math.PI / 2, 0],
-                scale: [4, 4, 4],
+                 translation: [2.915293039390339, 1.8858904473762181, 5.758517254357587],
+    scale: [4, 4, 4],
+    rotation: [0, -0.9986937889410472, 0, -0.05109516543250514],
                 type: "2d",
                 textureType: "image",
-                textureLocation: "./assets/images/CroquetLogo_RGB.jpg",
-                cardURL: "https://croquet.io",
+                textureLocation: "./assets/images/poster.png",
+                cardURL: "https://www.dragonheir.info",
                 cardHilite: 0xffffaa,
                 behaviorModules: ["URLLink"],
                 fullBright: true,
@@ -78,34 +78,54 @@ export function init(Constants) {
         },
         {
             card: {
-                name: "auggie stand",
-                translation: [7.79, -1.72, -14.82],
-                // rotation: [0, 0, 0, 1],
+                name: "d20",
+              	translation: [3.944133874517732, 0.015077880495593554, -6.577857094718],
+	behaviorModules:["Spin"],
+		spin: 0.1,
                 layers: ["pointer"],
-                behaviorModules: ["Billboard"],
-                dataLocation: "3en5pHEDZi7EpsaJ-_yONogv4uVau9ZlIxyh1TH4AhAQDRERFRZfSkoDDAkAFksQFksGFwoUEAARSwwKShBKHzAREjUqHyMQKjZULgwCKD8MUFZcHSMhIl1VV0oMCksGFwoUEAARSwgMBhcKEwAXFgBLEwQLABYWBEoOPFcnN1A0MQFUNQJSCFArMhcyMj8hIx8RDCMBIB06LygUJgYULAEjFDBVSgEEEQRKUAoHFCdQMwYEESE1NCscPTckDggoDDUwDyIgFTFXVw5IDAhREDc6Jwc0MA",
-                dataScale: [1, 1, 1],
-                fileName: "/AuggieStand.glb",
+                scale: [0.062590422637116, 0.062590422637116, 0.062590422637116],
+		fileName: "/d20.glb",
+		dataLocation: "./assets/3D/d20.glb",
+               dataScale:[20,20,20],
+                fileName: "/d20.glb",
                 modelType: "glb",
-                shadow: true,
+           	shadow: true,
                 singleSided: true,
                 type: "3d",
             }
         },
         {
             card: {
-                name: "auggie award",
-                translation: [7.79, -0.45, -14.82],
-                // rotation: [0, 0, 0, 1],
+                name: "d20",
+                translation: [-0.23800002127478237, 0.07293705992155575, -13.447841446579483],
+behaviorModules:["Spin"],
+		spin: 0.1,
                 layers: ["pointer"],
-                behaviorModules: ["Billboard"],
-                dataLocation: "35hI1OQ1NaqWki0Or-uHXAVM9vipZGVZIc_emQwLfCAcXUFBRUYPGhpTXFlQRhtARhtWR1pEQFBBG1xaGkAaT2BBQmV6T3NAemYEflxSeG9cAAYMTXNxcg0FBxpcWhtWR1pEQFBBG1hcVkdaQ1BHRlAbQ1RbUEZGVBpebAd3ZwBkYVEEZVICWAB7YkdiYm9xc09BXHNRcE1qf3hEdlZEfFFzRGAFGlFUQVQabV1-bFdNZAdnBAxCfnAYXk9kamVaAUVbBnt3QUBaWwUEfnhPb1RWfhhqDQ",
-                dataScale: [1, 1, 1],
-                fileName: "/Auggie2.glb",
+                scale: [0.062590422637116, 0.062590422637116, 0.062590422637116],
+		fileName: "/d20.glb",
+		dataLocation: "./assets/3D/d20.glb",
+               dataScale:[20,20,20],
+                fileName: "/d20.glb",
                 modelType: "glb",
-                license: "CC-BY",
-                attribution: "'Auggie Awards Trophy AWE 2022' by Kai Oldman derived from 'Auggie Awards Trophy AWE 2021' (https://skfb.ly/otrIP) by oriinbar is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).",
-                shadow: true,
+           	shadow: true,
+                singleSided: true,
+                type: "3d",
+            }
+        },
+ {
+            card: {
+                name: "d20",
+                translation: [-9.401388466959855, 0.31291304094083516, -4.949904075132982],
+behaviorModules:["Spin"],
+		spin: 0.1,
+                layers: ["pointer"],
+                scale: [0.062590422637116, 0.062590422637116, 0.062590422637116],
+		fileName: "/d20.glb",
+		dataLocation: "./assets/3D/d20.glb",
+               dataScale:[20,20,20],
+                fileName: "/d20.glb",
+                modelType: "glb",
+           	shadow: true,
                 singleSided: true,
                 type: "3d",
             }
@@ -149,12 +169,13 @@ export function init(Constants) {
                 fullBright: true,
             }
         },
-
         {
             card: {
-translation: [-7.536756673672695, 2.463900900619442, 1.126241794287294],
+               
+        translation: [-7.536756673672695, 2.463900900619442, 1.126241794287294],
     scale: [5.114933537804794, 5.114933537804794, 0.4262444614837328],
     rotation: [0, 0.9998859372736829, 0, 0.015103391749164566],
+		scale: [12, 12, 1],
                 depth: 1.5,
                 type: "2d",
                width: 4,
@@ -215,7 +236,7 @@ translation: [-7.536756673672695, 2.463900900619442, 1.126241794287294],
         */
         {
             card: {
-                translation: [11.914606500892997, 0.4, 0.25],
+                translation: [7.032592413493899, 1.8193710684133375, 0.25],
                 scale: [4, 4, 4],
                 rotation: [0, -Math.PI / 2, 0],
                 layers: ["pointer"],
@@ -225,8 +246,8 @@ translation: [-7.536756673672695, 2.463900900619442, 1.126241794287294],
                 frameColor: 16777215,
                 fullBright: true,
                 modelType: "pdf",
-                fileName: "/Croquet Microverse Product Deck - Oct 25b 2022 - Distro.pdf",
-                pdfLocation: "3HgyNLeuXEk5ULkVat-Q3pm19KHPQU3YmpYZBQTiumFQIDw8ODtyZ2cuISQtO2Y9O2YrOic5PS08ZiEnZz1nDyweKjEkATsJIxkrChAsew8wKT4xPx0DHxERemchJ2YrOic5PS08Zi8pJCQtOjFnIQIHOAYnB314ADp8CQwbJw8nCx8AGHplDQQBLycOB3w4CgV5OQ0ALR0XHWcsKTwpZwAMMB4FO39_fXxlO38bcBh8eQ0BDnB8eS0CIxsMcR8rEQsiPAs_Fx4iHyc",
+                fileName: "/novedades.pdf",
+                pdfLocation: "./assets/images/novedades.pdf",
                 shadow: true,
                 singleSided: true,
                 type: "2d",
