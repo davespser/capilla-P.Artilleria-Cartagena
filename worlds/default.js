@@ -50,7 +50,7 @@ export function init(Constants) {
                 type: "lighting",
                 behaviorModules: ["Light"],
                 fileName: "/aboveClouds.jpg",
-                dataLocation: "./assets/sky/aboveCloud.jpg",
+                dataLocation: "./assets/sky/aboveClouds.jpg",
                 dataType: "jpg",
                 toneMappingExposure: 0.2,
                 loadSynchronously: true,
