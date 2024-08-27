@@ -9,7 +9,7 @@ export function init(Constants) {
 
     Constants.UserBehaviorDirectory = "behaviors/default";
     Constants.UserBehaviorModules = [
-        "lights.js", "bouncingBall.ts", "bitcoinTracker.ts", "openPortal.js", "urlLink.js", "cradle.js", "video.js", "spin.js",
+        "lights.js", "bouncingBall.ts", "bitcoinTracker.ts", "openPortal.js", "urlLink.js", "cradle.js", "video.js", "spin.js", "pool.js",
     ];
 
     const frameColor = 0x888888;
@@ -50,7 +50,7 @@ export function init(Constants) {
                 type: "lighting",
                 behaviorModules: ["Light"],
                 fileName: "/aboveClouds.jpg",
-                dataLocation: "./assets/sky/aboveClouds.jpg",
+                dataLocation: "./assets/sky/abovecloudz.jpg",
                 dataType: "jpg",
                 toneMappingExposure: 0.2,
                 loadSynchronously: true,
@@ -59,13 +59,13 @@ export function init(Constants) {
         {
             card: {
                 name: "image card",
-                 translation: [2.915293039390339, 1.8858904473762181, 5.758517254357587],
-    scale: [4, 4, 4],
+                  translation: [-7.639420878791643, 6.817473185675391, 4.3596879507405895],
+    scale: [9.512173766504528, 9.512173766504528, 9.512173766504528],
     rotation: [0, -0.9986937889410472, 0, -0.05109516543250514],
                 type: "2d",
                 textureType: "image",
-                textureLocation: "./assets/images/poster.png",
-                cardURL: "https://www.dragonheir.info",
+                textureLocation: "./assets/images/poster.jpg",
+                cardURL: "https://noctua.gg/games/ash_echoes",
                 cardHilite: 0xffffaa,
                 behaviorModules: ["URLLink"],
                 fullBright: true,
@@ -76,6 +76,18 @@ export function init(Constants) {
                 shadow: true,
             }
         },
+{
+            card:{
+                name:"pool",
+                type: "object",
+                translation: [-2.5, -1.6, -5.5],
+		  scale: [8.718333396228726, 8.718333396228726, 8.718333396228726],
+                layers: ["pointer", "walk"],
+                behaviorModules: ["Pool"],
+                poolSize: [5.6, 5.6],
+            }
+        },
+
         {
             card: {
                 name: "d20",
@@ -172,10 +184,10 @@ behaviorModules:["Spin"],
         {
             card: {
                
-        translation: [-7.536756673672695, 2.5409421111020682, 1.126241794287294],
-    scale: [6.172397090310816, 6.172397090310816, 0.514366424192568],
-    rotation: [0, 0.9998859372736829, 0, 0.015103391749164566],
-		
+        translation: [5.027810500308572, 10.646200255023135, 14.032058485833632],
+    scale: [12, 12, 1],
+    rotation: [0, 0.9912180205953774, 0, -0.13223779961486812],
+		scale: [12, 12, 1],
                 depth: 1.5,
                 type: "2d",
                width: 4,
