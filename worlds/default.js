@@ -52,7 +52,6 @@ export function init(Constants) {
                 fileName: "/aboveClouds.jpg",
                 dataLocation: "./assets/sky/aboveClouds.jpg",
                 dataType: "jpg",
-                toneMappingExposure: 0.2,
                 loadSynchronously: true,
             }
         },
