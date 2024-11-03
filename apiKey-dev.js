@@ -1,4 +1,5 @@
-/* Copy this into a file named apiKey.js */
-const apiKey = '1nDAhoHK5d7maMvxyu8jxDumt5JBpI97JJf0OeGfG';
-const appId = 'io.croquet.physics';
-export default {apiKey, appId};
+const apiKey = '1y11HmnOLJ1HyoA56aFllFz30tNxDpLAzn351Did4';
+const appId = 'com.gmail.dav.esp.ser.microverse';
+export default  {apiKey, appId};
+
+

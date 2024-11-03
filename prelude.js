@@ -33,7 +33,7 @@ export async function prelude() {
       Alternatively, you can set it from this file by uncomment the folloing line:
     */
 
-    window.microverseHighDPIOption = true;
+    // window.microverseHighDPIOption = true;
 
     /*
       If you want to load a CSS file, or additional JS files or such before
@@ -44,9 +44,13 @@ export async function prelude() {
           let css = document.createElement("link");
           css.rel = "stylesheet";
           css.type = "text/css";
+          css.
           css.id = "joystick-css";
           css.onload = resolve;
-      })
+          css.href = "/assets/css/joystick.css";
+          document.head.appendChild(css);
+      });
+
     */
 
     /*
