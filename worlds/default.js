@@ -3,190 +3,128 @@
 // info@croquet.io
 
 export function init(Constants) {
-    Constants.AvatarNames = [
-        "newwhite", "madhatter", "marchhare", "queenofhearts", "cheshirecat", "alice"
-    ];
+    Constants.AvatarNames = ["newwhite"];
+
+    /* Alternatively, you can specify a card spec for an avatar,
+       instead of a string for the partical file name, to create your own avatar.
+       You can add behaviorModules here. Also, if the system detects a behavior module
+       named AvatarEventHandler, that is automatically installed to the avatar.
+        {
+            type: "3d",
+            modelType: "glb",
+            name: "rabbit",
+            dataLocation: "./assets/avatars/newwhite.zip",
+            dataRotation: [0, Math.PI, 0],
+            dataScale: [0.3, 0.3, 0.3],
+        }
+    */
 
     Constants.UserBehaviorDirectory = "behaviors/default";
     Constants.UserBehaviorModules = [
-        "lights.js", "bouncingBall.ts", "bitcoinTracker.ts", "openPortal.js", "urlLink.js", "cradle.js", "video.js", "spin.js", "pool.js",
+        "lights.js", "video.js"
     ];
-
-    const frameColor = 0x888888;
 
     Constants.DefaultCards = [
         {
-            card: {
-                name: "entrance",
-                type: "object",
-                translation: [-12, 0, -10.2],
-                rotation: [0, -Math.PI / 2, 0],
-                spawn: "default",
-            }
-        },
-        {
-            card: {
+          card: {
                 name:"world model",
                 type: "3d",
-                fileName: "/artgallery_042122.glb.zip",
-                dataLocation: "./assets/3D/artgallery_042122.glb.zip",
+                fileName: "/artgallery_042122.zip",
+                dataLocation: "./assets/3D/artgallery_042122.zip",
                 singleSided: true,
                 shadow: true,
                 layers: ["walk"],
-                translation:[0, -1.7, 0],
-                dataScale:[1,1,1],
+                translation: [110.36808728454446, -5, 12.724934904465663],
+		scale: [2,2,2],
                 loadSynchronously: true,
 
-                placeholder: true,
-                placeholderSize: [400, 0.1, 400],
-                placeholderColor: 0x808080,
-                placeholderOffset: [0, 0, 0],
-            }
-        },
-        {
-            card: {
-                name: "light",
-                layers: ["light"],
-                type: "lighting",
-                behaviorModules: ["Light"],
-                fileName: "/aboveClouds.jpg",
-                dataLocation: "./assets/sky/aboveClouds.jpg",
-                dataType: "jpg",
-                loadSynchronously: true,
-            }
-        },
-        {
-            card: {
-                name: "image card",
-                     translation: [-7.2593320495457245, 1.9717791075524556, 1.2605939404663413],
-    scale: [8.459259495596873, 8.459259495596873, 8.459259495596873],
-    rotation: [0, -0.9992520491948804, 0, 0.03866965450883084],
-                type: "2d",
-                textureType: "image",
-                textureLocation: "./assets/images/poster.jpg",
-                cardURL: "https://noctua.gg/games/ash_echoes",
-                cardHilite: 0xffffaa,
-                behaviorModules: ["URLLink"],
-                fullBright: true,
-                frameColor: 0xcccccc,
-                color: 0xbbbbbb,
-                cornerRadius: 0.05,
-                depth: 0.05,
-                shadow: true,
             }
         },
 {
-            card:{
-                name:"pool",
-                type: "object",
-                translation: [-2.5, -1.6, -5.5],
-		  scale: [8.718333396228726, 8.718333396228726, 8.718333396228726],
-                layers: ["pointer", "walk"],
-                behaviorModules: ["Pool"],
-                poolSize: [5.6, 5.6],
-            }
-        },
+          card: {
+                 translation: [121.5399788067577, -4.737883110445555, 17.55358939777939],
+    scale: [6.997184907473499, 6.997184907473499, 6.997184907473499],
+    rotation: [0, -0.007264692316317128, 0, 0.9999736117746055],
+    layers: ["pointer"],
+    name: "/ASIENTOS.glb",
+    dataLocation: "3yGz3ZPpm_19hqfluD8dWruiSehDFc7rBNdGRLfOsq5QEQ0NCQpDVlYfEBUcClcMClcaCxYIDBwNVxAWVgxWAAENExIIEhEQSRgxSRYKHxgpHQkwMxIqCxtJS1YaFhRXHhQYEBVXHRgPVxwKCVcKHAtXFBAaCxYPHAsKHFYjCQguFhYvIw9KDUozMAEQMC4AFzI2TBQqIz5MQRtKNgkUES8PCC8BChooVh0YDRhWTk08HDYyAUwuF0ERKAkzDDofKUsOLSEaCjBLSDEbGC4dIQEIKTEJHgNMOA",
+    dataScale: [0.31654106990947356, 0.31654106990947356, 0.31654106990947356],
+    fileName: "/ASIENTOS.glb",
+    modelType: "glb",
+    shadow: true,
+    singleSided: true,
+    type: "3d",
 
-        {
-            card: {
-                name: "d20",
-              	translation: [3.944133874517732, 0.015077880495593554, -6.577857094718],
-	behaviorModules:["Spin"],
-		spin: 0.1,
-                layers: ["pointer"],
-                scale: [0.062590422637116, 0.062590422637116, 0.062590422637116],
-		fileName: "/d20.glb",
-		dataLocation: "./assets/3D/d20.glb",
-               dataScale:[20,20,20],
-                fileName: "/d20.glb",
-                modelType: "glb",
-           	shadow: true,
-                singleSided: true,
-                type: "3d",
             }
         },
-        {
-            card: {
-                name: "d20",
-                translation: [-0.23800002127478237, 0.07293705992155575, -13.447841446579483],
-behaviorModules:["Spin"],
-		spin: 0.1,
-                layers: ["pointer"],
-                scale: [0.062590422637116, 0.062590422637116, 0.062590422637116],
-		fileName: "/d20.glb",
-		dataLocation: "./assets/3D/d20.glb",
-               dataScale:[20,20,20],
-                fileName: "/d20.glb",
-                modelType: "glb",
-           	shadow: true,
-                singleSided: true,
-                type: "3d",
+{
+          card: {
+        translation: [0.9800843629242768, -4.199961239043851, -22.47650824620064],
+    rotation: [0, 0.0011050009192556368, 0, 0.9999993894862979],
+    layers: ["pointer"],
+    name: "/bandera.glb",
+    dataLocation: "3vzj4u2EtsT7LHlTZZ_hJ8RjQqKQymRaUCw0T4IO5_fsHgICBgVMWVkQHxoTBVgDBVgVBBkHAxMCWB8ZWQNZDw4CHB0HHR4fRhc-RhkFEBcmEgY_PB0lBBRGRFkVGRtYERsXHxpYEhcAWBMFBlgFEwRYGx8VBBkAEwQFE1kjED4bMQQ8JRceRxgeMAc4MDcBJwIZOT03HDonDkQYRQIuJQIwMwEDQgQFWRIXAhdZNwAUPQYgBCkZLFsjLA8DTiBPDCAEES88REU8LhEzRU43FxxbJjgXIQQAHQ",
+    dataScale: [0.6137589492248573, 0.6137589492248573, 0.6137589492248573],
+    fileName: "/bandera.glb",
+    modelType: "glb",
+    shadow: true,
+    singleSided: true,
+    type: "3d",
             }
         },
- {
-            card: {
-                name: "d20",
-                translation: [-9.401388466959855, 0.31291304094083516, -4.949904075132982],
-behaviorModules:["Spin"],
-		spin: 0.1,
-                layers: ["pointer"],
-                scale: [0.062590422637116, 0.062590422637116, 0.062590422637116],
-		fileName: "/d20.glb",
-		dataLocation: "./assets/3D/d20.glb",
-               dataScale:[20,20,20],
-                fileName: "/d20.glb",
-                modelType: "glb",
-           	shadow: true,
-                singleSided: true,
-                type: "3d",
+{
+          card: {
+      translation: [-1.48672774197519, -1.5624211893063744, -24.726114915082725],
+    rotation: [0, 0.04829760069974649, 0, 0.9988329899270688],
+    layers: ["pointer"],
+    name: "/barbara.glb",
+    dataLocation: "3MCSFZXZolp-ZHI8WOQtqHmwbi_f9_wa14VEII0rq35AJTk5PT53YmIrJCEoPmM4PmMuPyI8OCg5YyQiYjhiNDU5JyY8JiUkfSwFfSI-KywdKT0EByYePy99f2IuIiBjKiAsJCFjKSw7Yyg-PWM-KD9jICQuPyI7KD8-KGIYGwQgDxcHL2B0LH90AzkODBt4BCsjAQwMPHw7Ai4vLHQYYCosOCV1JBQAYiksOSxiGnUHKRILeCsHJnR6OgYMFz4qNXR5Dh8_Dnw1HTd7eikcNx97IB4dOCk9fQ",
+    dataScale: [0.8580057175267466, 0.8580057175267466, 0.8580057175267466],
+    fileName: "/barbara.glb",
+    modelType: "glb",
+    shadow: true,
+    singleSided: true,
+    type: "3d",
+
             }
         },
-        /*
-        {
-            card: {
-                translation: [-12, -0.4, -10.2],
-                rotation: [0, -Math.PI / 2, 0],
-                layers: ["pointer"],
-                className: "PortalActor",
-                color: 16737996,
-                cornerRadius: 0.05,
-                depth: 0.05,
-                frameColor: 8947848,
-                height: 2.4,
-                portalURL: "?world=refinery",
-                type: "2d",
-                width: 1.8,
-            }
+{
+          card: {
+   translation: [78.51156393192817, -4.635167772295697, 0.8464184323868524],
+    rotation: [0, 0, 0, 1],
+    layers: ["pointer"],
+    name: "/jesus.glb",
+    dataLocation: "3BI69aEJTwY4IKDd2Yzwsn1cKWOYtIsIk8iPasH3EzBAKjY2MjF4bW0kKy4nMWw3MWwhMC0zNyc2bCstbTdtOzo2KCkzKSorciMKci0xJCMSJjILCCkRMCBycG0hLS9sJS8jKy5sJiM0bCcxMmwxJzBsLyshMC00JzAxJ20dNiBxLyYEHSp6MRsFGyURFy4EOBcmFRoMIzgAKA4GdC8tFB0PcHMJCHdybSYjNiNtOAY0FXYXBxogFw0DAW87cwxwDHUAOgsvLjE3OzMQDhcwNSM1KyRvDQ8dGw",
+    dataScale: [1.3861573681240826, 1.3861573681240826, 1.3861573681240826],
+    fileName: "/jesus.glb",
+    modelType: "glb",
+    shadow: true,
+    singleSided: true,
+    type: "3d",
+		}
         },
-        */
-        {
-            card: {
-                name:"bouncinglogo",
-                translation: [12, 0.70, -10.24],
-                rotation: [0, -Math.PI / 2, 0],
-                behaviorModules: ["BouncingBall"],
-                scale: [3, 3, 3],
-                width: 1,
-                height: 1,
-                layers: ["pointer"],
-                type: "2d",
-                dataLocation: "./assets/SVG/full-circle.svg",
-                textureType: "canvas",
-                textureWidth: 1024,
-                textureHeight: 1024,
-                frameColor: frameColor,
-                color: 0xffffff,
-                depth: 0.05,
-                fullBright: true,
-            }
-        },
-        {
+    {
             card: {
                
-         translation: [-18.92193273500467, 1.2104895412146348, -2.734777003497544],
-    scale: [12, 12, 1],
-    rotation: [0, 0.9092882400357183, 0, 0.4161669094639143],
-		scale: [12, 12, 1],
+           translation: [-3.707630886617814, 0.6415278761580767, -15.884165520636468],
+    scale: [6.005136649156522, 6.005136649156522, 0.5004280540963768],
+    rotation: [0, -0.7052258625808386, 0, -0.7089827097659801],
+    layers: ["pointer"],
+    behaviorModules: ["VideoPlayer"],
+    depth: 1.5,
+    fullBright: true,
+    height: 2,
+    pauseTime: 120.005543,
+    permissions: ["action.tv"],
+    playStartTime: 100.073,
+    step: 0.5,
+    textureHeight: 4048,
+    textureLocation: "./assets/video/Big_Buck_Bunny.mp4",
+    textureType: "video",
+    textureWidth: 8096,
+    type: "2d",
+    width: 4,
+
                 depth: 1.5,
                 type: "2d",
                width: 4,
@@ -204,107 +142,13 @@ behaviorModules:["Spin"],
         },
         {
             card: {
-                name: "portal button",
-                translation: [-12.1, 1.3, -10.17839395666378],
-                behaviorModules: ["OpenRefineryPortalButton"],
-                type: "object",
-            }
-        },
-        /*
-        {
-            card: {
-                name: "sticky",
-                className: "TextFieldActor",
-                translation: [-12, 0.8, -12.2],
-                behaviorModules: ["StickyNote"],
-                rotation: [0, Math.PI / 2, 0],
-                depth: 0.05,
-                type: "text",
-                runs: [{text: `
-                translation: [-12, -0.4, -10.2],
-                rotation: [0, -1.5707963267948966, 0],
-                layers: ["pointer", "portal"],
-                className: "PortalActor",
-                color: 16737996,
-                cornerRadius: 0.05,
-                depth: 0.05,
-                frameColor: 8947848,
-                height: 2.4,
-                portalURL: "?world=refinery",
-                type: "2d",
-                width: 1.8,
-                `}],
-                margins: {left: 20, top: 20, right: 20, bottom: 20},
-                backgroundColor: 0xf4e056,
-                //color: 0xf4e056,
-                frameColor: frameColor,
-                width: 1,
-                height: 1,
-                textScale: 0.002,
-                shadow: true,
-            }
-        },
-        */
-        {
-            card: {
-                 translation: [5.994966905632991, 1.6589752996755989, -6.351156814750958],
-    scale: [4, 4, 4],
-    rotation: [0, -0.9014507841033635, 0, 0.4328816048753183],
-                layers: ["pointer"],
-                behaviorModules: ["PDFView"],
-                color: 8947848,
-                depth: 0.05,
-                frameColor: 16777215,
-                fullBright: true,
-                modelType: "pdf",
-                fileName: "/novedades.pdf",
-                pdfLocation: "./assets/images/novedades.pdf",
-                shadow: true,
-                singleSided: true,
-                type: "2d",
-            }
-        },
-        /*
-          {
-            card: {
-                translation: [11.914606500892997, 0.4, 0.25],
-                scale: [4, 4, 4],
-                rotation: [0, -Math.PI / 2, 0],
-                layers: ["pointer"],
-                name: "/22.05.23 Croquet AWE Presentation.jpg",
-                cornerRadius: 0.02,
-                fileName: "/22.05.23 Croquet AWE Presentation.jpg",
-                fullBright: false,
-                modelType: "img",
-                shadow: true,
-                singleSided: true,
-                textureLocation: "36xe210tezWr_E_zOXjWN7_Oz_Olw09j9csX_tqBoesMXkJCRkUMGRlQX1pTRRhDRRhVRFlHQ1NCGF9ZGUMZcVJgVE9af0V3XWdVdG5SBXFOV0BPQWN9YW9vBBlfWRhVRFlHQ1NCGFtfVURZQFNERVMZVFUPTHhQcEFMREMAV0N-WVF7RloCBU9ZVXRwB0RgDl5zAWwAUH1GDg8AVRlSV0JXGXtQDkRfW3lcBXJgZVx6b1xVfm4CemVAD0R8TF1DRnBVAAdjZ0JTegZUAWc",
-                textureType: "image",
-                type: "2d",
+                name: "light",
+                
+                dataLocation: "3OF2-s4U1ZOJduGATmLEIXo1iTkQHd5ZBknKgL5SvqpQJzs7Pzx1YGApJiMqPGE6PGEsPSA-Oio7YSYgYDpgCCsZLTYjBjwOJB4sDRcrfAg3Ljk2OBoEGBYWfWAmIGEsPSA-Oio7YSImLD0gOSo9PCpgPwB9AAIIISx8YiYneScqKyQaIisNLHkaGT8YKg56JQwQfHstPiNiGQ49e2ArLjsuYCMBPgMiCQt3OQskGhcleSp9HQIIfXseHgo7EAo9CB48FRwpegsCLH4OIwY",
+                fileName: "/abandoned_parking_4k.jpg",
+                dataType: "jpg",
+                
             }
         }
-        {
-            card: {
-                name:"pendulum",
-                type: "object",
-                translation: [-0.03701975732147922, 3.2368919013826734, 8.444841625884546],
-                behaviorModules: ["Rapier", "Pendulum"],
-                layers: ["pointer"],
-                scale: [0.2, 0.2, 0.2],
-                color: 0xaa6666,
-            }
-        },
-        */
-        {
-            card: {
-                name: "cradle",
-                type: "object",
-                translation: [-9.67915341742099, 3.2368919013826734, 4.368801765942323],
-                behaviorModules: ["Cradle"],
-                layers: ["pointer"],
-                shadow: true,
-                scale: [0.2, 0.2, 0.2],
-            }
-        },
     ];
 }
