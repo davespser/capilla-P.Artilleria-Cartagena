@@ -1,2 +1,2 @@
 # biblos-hadast
-https://davespser.github.io/tabernadeSagomir/?voiceChat=true
+https://davespser.github.io/capilla-P.Artilleria-Cartagena/?voiceChat=true
