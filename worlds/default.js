@@ -176,7 +176,7 @@ export function init(Constants) {
     frameColor: 13421772,
     fullBright: true,
     shadow: true,
-    textureLocation: "./assets/images/Salzillo.PNG",
+    textureLocation: "./assets/images/salzillo.PNG",
     textureType: "image",
     type: "2d",
 
