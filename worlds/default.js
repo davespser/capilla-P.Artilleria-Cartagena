@@ -21,7 +21,7 @@ export function init(Constants) {
 
     Constants.UserBehaviorDirectory = "behaviors/default";
     Constants.UserBehaviorModules = [
-        "lights.js", "ambientSound.js", "video.js"
+        "lights.js", "ambientSound.js", "urlLink.js", "video.js"
     ];
 
     Constants.DefaultCards = [
@@ -136,6 +136,51 @@ export function init(Constants) {
     type: "3d",
 
 		}
+        },
+ {
+            card: {
+                name: "About Mythos",
+                    translation: [9.397047549867336, -0.9704325432678514, -20.274502629234405],
+    scale: [4, 4, 4],
+    rotation: [0, 0.6935825162895125, 0, -0.7203771880740727],
+    layers: ["pointer"],
+    behaviorModules: ["PDFView"],
+    name: "About Mythos",
+    color: 8947848,
+    depth: 0.05,
+    frameColor: 16777215,
+    fullBright: true,
+    height: 1,
+    modelType: "pdf",
+    pdfLocation: "./assets/pdf/Memorial.pdf",
+    shadow: true,
+    singleSided: true,
+    type: "2d",
+    width: 0.7066508313539193,
+
+            }
+        },
+  {
+            card: { // slot 5
+                name: "image card",
+               translation: [9.21220765968831, -1.0359913674489525, -15.073341408941323],
+    scale: [4, 4, 4],
+    rotation: [0, 0.712048505694522, 0, -0.7021302767565277],
+    layers: ["pointer"],
+    behaviorModules: ["URLLink"],
+    name: "image card",
+    cardURL: "https://cofradiacalifornia.es/magna-procesion-del-santisimo-cristo-del-prendimiento/",
+    color: 12303291,
+    cornerRadius: 0.05,
+    depth: 0.05,
+    frameColor: 13421772,
+    fullBright: true,
+    shadow: true,
+    textureLocation: "./assets/images/Salzillo.PNG",
+    textureType: "image",
+    type: "2d",
+
+            }
         },
     {
             card: {
