@@ -152,7 +152,7 @@ export function init(Constants) {
     fullBright: true,
     height: 1,
     modelType: "pdf",
-    pdfLocation: "./assets/pdf/Memorial.pdf",
+    pdfLocation: "./assets/PDF/Memorial.pdf",
     shadow: true,
     singleSided: true,
     type: "2d",
