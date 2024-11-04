@@ -21,10 +21,28 @@ export function init(Constants) {
 
     Constants.UserBehaviorDirectory = "behaviors/default";
     Constants.UserBehaviorModules = [
-        "lights.js", "video.js"
+        "lights.js", "ambientSound.js", "video.js"
     ];
 
     Constants.DefaultCards = [
+	{
+            card: {
+                name: "ambient sound",
+                translation: [-3.707630886617814, 0.6415278761580767, -17.884165520636468],
+		scale: [6.005136649156522, 6.005136649156522, 0.5004280540963768],
+    rotation: [0, -0.7052258625808386, 0, -0.7089827097659801],
+                layers: ["pointer"],
+                type: "object",
+                behaviorModules: ["AmbientSound"],
+                dataType: "aac",
+                dataLocation: "./assets/sounds/WindAmbience.aac",
+                textureLocation: "./assets/images/mythos.png",
+                loop: true,
+                volume: 0.2,
+                maxVolume: 0.3
+            },
+            id: "ambientSound"
+        },
         {
           card: {
                 name:"world model",
@@ -42,8 +60,8 @@ export function init(Constants) {
         },
 {
           card: {
-                 translation: [121.5399788067577, -4.737883110445555, 17.55358939777939],
-    scale: [6.997184907473499, 3.5, 6.997184907473499],
+            translation: [92.23812356443818, -4.778918452229134, 11.26593920534956],
+    scale: [5.283424629356559, 5.283424629356559, 5.283424629356559],
     rotation: [0, -0.007264692316317128, 0, 0.9999736117746055],
     layers: ["pointer"],
     name: "/ASIENTOS.glb",
@@ -54,8 +72,7 @@ export function init(Constants) {
     shadow: true,
     singleSided: true,
     type: "3d",
-
-            }
+           }
         },
 {
           card: {
@@ -103,11 +120,28 @@ export function init(Constants) {
     type: "3d",
 		}
         },
+{
+          card: {
+     translation: [3.251084801807335, -2.810777684165691, -21.295203784401593],
+    scale: [0.8557465594660876, 0.8557465594660876, 0.8557465594660876],
+    rotation: [0, 0.008158042665266705, 0, 0.9999667226162438],
+    layers: ["pointer"],
+    name: "/mesa.glb",
+    dataLocation: "3uskkQOFJXbWVQiX9S_hIAYpBf87yCnxod6fkor6eqbwHQEBBQZPWloTHBkQBlsABlsWBxoEABABWxwaWgBaDA0BHx4EHh0cRRQ9RRoGExQlEQU8Px4mBxdFR1oWGhhbEhgUHBlbERQDWxAGBVsGEAdbGBwWBxoDEAcGEFoEOxZEDyJDJDcYHTc-Ly0-IERCMhsmRRc-HwI-JQE-MEFNHjocH0UPQzcCWhEUARRaDDoZBgYFBTM9EBcRH0wlFyEZICAkBgE9OjYaEDslETFAIjcfHUYnGic-OA",
+    dataScale: [1.8349174152879124, 1.8349174152879124, 1.8349174152879124],
+    fileName: "/mesa.glb",
+    modelType: "glb",
+    shadow: true,
+    singleSided: true,
+    type: "3d",
+
+		}
+        },
     {
             card: {
                
-           translation: [-3.707630886617814, 0.6415278761580767, -15.884165520636468],
-    scale: [6.005136649156522, 6.005136649156522, 0.5004280540963768],
+            translation: [-3.4472012314183917, -1.8970838419880722, -15.884165520636468],
+    scale: [4.328312689670306, 4.328312689670306, 0.3606927241391921],
     rotation: [0, -0.7052258625808386, 0, -0.7089827097659801],
     layers: ["pointer"],
     behaviorModules: ["VideoPlayer"],
