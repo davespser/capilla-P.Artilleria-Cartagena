@@ -5,7 +5,7 @@ export async function prelude() {
      reduce the load time, you uncomment the following line:
     */
 
-    // window.RAPIERModule = {version: () => "stubbed out"};
+     window.RAPIERModule = {version: () => "stubbed out"};
 
     /*
       The portals are disabled by default but enabled by adding a URL
